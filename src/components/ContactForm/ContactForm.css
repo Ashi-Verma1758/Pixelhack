@@ -1,0 +1,74 @@
+/* src/components/ContactForm/ContactForm.css */
+.contact-form-container {
+  background-color: #A03258; /* The prominent red/maroon color from the video */
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-form-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.contact-form-content p {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.form-field {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.form-field label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-field textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  resize: vertical;
+}
+
+.form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-field textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+button[type="submit"] {
+  background-color: white;
+  color: #A03258;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #f0f0f0;
+}

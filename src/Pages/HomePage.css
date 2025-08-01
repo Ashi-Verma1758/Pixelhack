@@ -1,0 +1,36 @@
+/* src/pages/HomePage.css */
+.homepage-container {
+  min-height: 100vh;
+  background-color: #f0f0f0; /* A light background color */
+  color: #333;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 8rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.marquee-section {
+  padding: 4rem 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.marquee-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}

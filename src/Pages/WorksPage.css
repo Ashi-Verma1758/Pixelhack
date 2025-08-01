@@ -1,0 +1,85 @@
+/* src/pages/WorksPage.css */
+.works-page-container {
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.works-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.works-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: white;
+  color: #000;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+.portfolio-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-info {
+  transform: translateY(0);
+}
+
+.portfolio-info h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.portfolio-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0.5rem 0 0;
+}

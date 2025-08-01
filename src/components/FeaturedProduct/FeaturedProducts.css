@@ -1,0 +1,93 @@
+/* src/components/FeaturedProducts/FeaturedProducts.css */
+.featured-products-container {
+  padding: 6rem 2rem;
+  background-color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.featured-products-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.featured-products-description {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-product-card {
+  position: relative;
+}
+
+.main-product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sub-product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.product-card {
+  position: relative;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.product-info h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.product-info p {
+  font-size: 1rem;
+  color: #888;
+  margin: 0.5rem 0;
+}
+
+.shop-now-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #000;
+}

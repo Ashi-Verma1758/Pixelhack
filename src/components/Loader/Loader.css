@@ -1,0 +1,47 @@
+/* src/components/Loader/Loader.css */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-content-wrapper {
+  text-align: center;
+}
+
+.loading-title {
+  color: white;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  width: 24rem;
+  max-width: 80vw;
+  height: 0.25rem;
+  background-color: #333; /* A dark gray for the background */
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: white;
+  border-radius: 9999px;
+}
+
+/* Add some responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .loading-title {
+    font-size: 1.5rem;
+  }
+}

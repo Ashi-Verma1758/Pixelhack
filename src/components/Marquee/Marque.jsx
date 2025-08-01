@@ -1,8 +1,9 @@
-// Marquee.jsx
+// src/components/Marquee/Marquee.jsx
 import React from 'react';
-import './Marquee.css'; 
+import './Marquee.css';
 
 const Marquee = ({ items }) => {
+  // We duplicate the items to create a seamless loop
   const marqueeItems = [...items, ...items];
 
   return (
