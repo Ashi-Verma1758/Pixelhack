@@ -1,0 +1,42 @@
+/* Marquee.css - Updated */
+
+/* (Keep the existing styles for .marquee-container and .marquee-content) */
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Updated styles for the marquee item and the image */
+.marquee-item {
+  flex-shrink: 0; 
+  padding: 0 10px; /* Adjust spacing between images */
+}
+
+.marquee-item img {
+  width: 30vw;  /* Set a fixed width for the image */
+  height: 40vh; /* Set a fixed height for the image */
+  object-fit: cover; /* This is the key property */
+  display: block;  /* Removes any extra space beneath the image */
+  border-radius: 8px; /* Optional: adds a nice rounded corner */
+}
+
