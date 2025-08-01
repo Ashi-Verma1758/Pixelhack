@@ -1,4 +1,3 @@
-// src/components/Loader/Loader.jsx
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -16,12 +15,12 @@ export function LoadingScreen({ onComplete }) {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressTimer);
-          setTimeout(onComplete, 1000); // Longer delay after finish
+          setTimeout(onComplete, 1000); 
           return 100;
         }
         return prev + 1;
       });
-    }, 40); // Slower increment
+    }, 40); 
 
     const nowCycle = setInterval(() => {
       setNowStyleIndex((prev) => (prev + 1) % nowStyles.length);

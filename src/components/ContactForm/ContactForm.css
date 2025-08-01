@@ -1,6 +1,5 @@
-/* src/components/ContactForm/ContactForm.css */
 .contact-form-container {
-  background-color: #A03258; /* The prominent red/maroon color from the video */
+  background-color: #A03258; 
   color: white;
   padding: 6rem 2rem;
   text-align: center;

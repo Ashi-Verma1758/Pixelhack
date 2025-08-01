@@ -1,7 +1,6 @@
-/* src/pages/HomePage.css */
 .homepage-container {
   min-height: 100vh;
-  background-color: #f0f0f0; /* A light background color */
+  background-color: #f0f0f0; 
   color: #333;
 }
 

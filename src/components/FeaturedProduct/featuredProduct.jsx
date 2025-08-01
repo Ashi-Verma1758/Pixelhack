@@ -1,15 +1,12 @@
-// src/components/FeaturedProducts/FeaturedProducts.jsx
 import React from 'react';
 import './FeaturedProducts.css';
 
-// Import your local images
 import minimalDeskImage from '../../assets/img1.jpg';
 import beautifulLampsImage from '../../assets/img2.jpg';
 import goldenOalaSofaImage from '../../assets/ing3.jpg';
 import chairSofaImage from '../../assets/img4.jpg';
 import accessoriesImage from '../../assets/img4.jpg';
 
-// Sample product data, now using the imported images
 const products = [
   { id: 1, name: 'Minimal Desk', price: '$600', image: minimalDeskImage },
   { id: 2, name: 'Beautiful Lamps', price: '$150', image: beautifulLampsImage },

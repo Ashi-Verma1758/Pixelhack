@@ -1,11 +1,9 @@
-// src/components/ContactForm/ContactForm.jsx
 import React from 'react';
 import './ContactForm.css';
 
 const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real application, you would handle form submission here
     alert('Form submitted! (This is a placeholder action)');
   };
 

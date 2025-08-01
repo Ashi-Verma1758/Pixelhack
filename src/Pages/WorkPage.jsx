@@ -1,8 +1,6 @@
-// src/pages/WorksPage.jsx
 import React from 'react';
 import './WorksPage.css';
 
-// Sample data for your portfolio items
 const portfolioItems = [
   { id: 1, title: 'OLGA PRUDKA', year: '2023', image: 'https://via.placeholder.com/600x800/E9E9E9?text=Project+1' },
   { id: 2, title: 'AIM', year: '2023', image: 'https://via.placeholder.com/600x800/222222?text=Project+2' },

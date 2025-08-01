@@ -27,33 +27,27 @@ const marqueeImages = [
 const HomePage = ({ onGoToWorks }) => {
   return (
     <div className="homepage-container">
-      {/* A simple nav button to go to the works page */}
       <div style={{ textAlign: 'right', padding: '1rem' }}>
         <button onClick={onGoToWorks} className="works-nav-btn">View Works</button>
       </div>
       
-      {/* Hero section */}
       <section className="hero-section">
         <h1>STEELLAR DESIGN STUDIO</h1>
       </section>
 
-      {/* Looping Marquee Section */}
       <section className="marquee-section">
         <h2>Selected Works</h2>
         <Marquee items={marqueeImages} />
       </section>
 
-      {/* Our Team Section */}
       <section className="team-section">
         <Team />
       </section>
       
-      {/* Featured Products Section */}
       <section className="featured-products-section">
         <FeaturedProducts />
       </section>
 
-      {/* Contact Form Section */}
       <section className="contact-section">
         <ContactForm />
       </section>
