@@ -1,11 +1,11 @@
 import React from 'react';
 import './FeaturedProducts.css';
 
-import minimalDeskImage from '../../assets/img1.jpg';
-import beautifulLampsImage from '../../assets/img2.jpg';
-import goldenOalaSofaImage from '../../assets/ing3.jpg';
-import chairSofaImage from '../../assets/img4.jpg';
-import accessoriesImage from '../../assets/img4.jpg';
+import minimalDeskImage from '../../../public/img1.jpg';
+import beautifulLampsImage from '../../../public/img2.jpg';
+import goldenOalaSofaImage from '../../../public/ing3.jpg';
+import chairSofaImage from '../../../public/img4.jpg';
+import accessoriesImage from '../../../public/img4.jpg';
 
 const products = [
   { id: 1, name: 'Minimal Desk', price: '$600', image: minimalDeskImage },

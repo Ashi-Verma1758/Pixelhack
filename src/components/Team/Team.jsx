@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Team.css';
 
-import ashiVermaImage from '../../assets/a.jpg';
-import yashiGuptaImage from '../../assets/b.jpg';
-import shubhaSinghImage from '../../assets/c.jpg';
-import saumyaVermaImage from '../../assets/d.jpg';
-import omVermaImage from '../../assets/e.jpg';
+import ashiVermaImage from '../../../public/a.jpg';
+import yashiGuptaImage from '../../../public/b.jpg';
+import shubhaSinghImage from '../../../public/c.jpg';
+import saumyaVermaImage from '../../../public/d.jpg';
+import omVermaImage from '../../../public/e.jpg';
 
 const teamMembers = [
   { id: 1, name: 'Ashi Verma', title: 'CEO', photo: ashiVermaImage },

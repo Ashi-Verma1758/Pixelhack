@@ -1,13 +1,16 @@
 import React from 'react';
 import './WorksPage.css';
-
+import ashiVermaImage from '../../../public/a.jpg';
+import yashiGuptaImage from '../../../public/b.jpg';
+import shubhaSinghImage from '../../../public/c.jpg';
+import saumyaVermaImage from '../../../public/d.jpg';
+import omVermaImage from '../../../public/e.jpg';
 const portfolioItems = [
-  { id: 1, title: 'OLGA PRUDKA', year: '2023', image: 'https://via.placeholder.com/600x800/E9E9E9?text=Project+1' },
-  { id: 2, title: 'AIM', year: '2023', image: 'https://via.placeholder.com/600x800/222222?text=Project+2' },
-  { id: 3, title: 'DAVID LAXER', year: '2024', image: 'https://via.placeholder.com/600x800/F5F5F5?text=Project+3' },
-  { id: 4, title: 'OBYS', year: '2024', image: 'https://via.placeholder.com/600x800/444444?text=Project+4' },
-  { id: 5, title: 'SELECTED WORKS', year: '2025', image: 'https://via.placeholder.com/600x800/E0E0E0?text=Project+5' },
-  { id: 6, title: 'ANOTHER PROJECT', year: '2025', image: 'https://via.placeholder.com/600x800/111111?text=Project+6' },
+  { id: 1, name: 'Ashi Verma', title: 'CEO', photo: ashiVermaImage },
+   { id: 2, name: 'Yashi Gupta', title: 'COO', photo: yashiGuptaImage },
+   { id: 3, name: 'Shubha Singh', title: 'Chief Product Officer', photo: shubhaSinghImage },
+   { id: 4, name: 'Saumya Verma', title: 'CTO', photo: saumyaVermaImage },
+   { id: 5, name: 'Om Verma', title: 'VP of Engineering', photo: omVermaImage },
 ];
 
 const WorksPage = ({ onGoHome }) => {
