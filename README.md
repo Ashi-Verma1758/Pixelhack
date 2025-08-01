@@ -1,12 +1,21 @@
-# React + Vite
+# 🎨 Creative Design Studio Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a sleek, modern, and visually engaging portfolio website for a **Creative Agency / Design Studio**. It showcases custom UI/UX, smooth animations, and a minimalistic style aimed at delivering an immersive experience to visitors.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Custom Animated Loader Screen**
+  - Stylish text-based loading animation with rotating word styles.
+  - Extended duration for dramatic effect.
+- 👥 **Team Showcase Section**
+  - Unique horizontal scroll experience for team members.
+  - Gradient backgrounds with subtle motion.
+  - Interactive hover effects and minimalist typography.
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React.js (Vite)
+- **Styling**: External CSS only (No Tailwind or Bootstrap)
+- **Assets**: Custom fonts, images, and motion transitions
+
+

@@ -1,21 +1,29 @@
-// src/components/Team/Team.jsx
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Team.css';
 
-// Sample data for your team members
+import ashiVermaImage from '../../assets/a.jpg';
+import yashiGuptaImage from '../../assets/b.jpg';
+import shubhaSinghImage from '../../assets/c.jpg';
+import saumyaVermaImage from '../../assets/d.jpg';
+import omVermaImage from '../../assets/e.jpg';
+
 const teamMembers = [
-  { id: 1, name: 'Dr. Rick McCartney', title: 'CEO', photo: 'https://via.placeholder.com/200/51e0d302/FFFFFF?text=RMC' },
-  { id: 2, name: 'Chris Koha', title: 'COO', photo: 'https://via.placeholder.com/200/51e0d302/FFFFFF?text=CK' },
-  { id: 3, name: 'Caroline Nieto', title: 'Chief Product Officer', photo: 'https://via.placeholder.com/200/51e0d302/FFFFFF?text=CN' },
-  { id: 4, name: 'Víctor Albertos', title: 'CTO', photo: 'https://via.placeholder.com/200/51e0d302/FFFFFF?text=VA' },
-  { id: 5, name: 'Adrián Rubio', title: 'VP of Engineering', photo: 'https://via.placeholder.com/200/51e0d302/FFFFFF?text=AR' },
+  { id: 1, name: 'Ashi Verma', title: 'CEO', photo: ashiVermaImage },
+  { id: 2, name: 'Yashi Gupta', title: 'COO', photo: yashiGuptaImage },
+  { id: 3, name: 'Shubha Singh', title: 'Chief Product Officer', photo: shubhaSinghImage },
+  { id: 4, name: 'Saumya Verma', title: 'CTO', photo: saumyaVermaImage },
+  { id: 5, name: 'Om Verma', title: 'VP of Engineering', photo: omVermaImage },
 ];
 
 const Team = () => {
   const [hoveredMember, setHoveredMember] = useState(null);
+  const [photoTop, setPhotoTop] = useState(0);
+  const containerRef = useRef(null);
 
-  const handleMouseEnter = (member) => {
+  const handleMouseEnter = (member, e) => {
     setHoveredMember(member);
+    const containerTop = containerRef.current.getBoundingClientRect().top;
+    setPhotoTop(e.currentTarget.getBoundingClientRect().top - containerTop + e.currentTarget.offsetHeight / 2 - 80);
   };
 
   const handleMouseLeave = () => {
@@ -23,7 +31,7 @@ const Team = () => {
   };
 
   return (
-    <div className="team-container">
+    <div className="team-container" ref={containerRef}>
       <div className="team-list">
         <h2>Our Team</h2>
         <ul>
@@ -31,7 +39,7 @@ const Team = () => {
             <li
               key={member.id}
               className={hoveredMember && hoveredMember.id === member.id ? 'active' : ''}
-              onMouseEnter={() => handleMouseEnter(member)}
+              onMouseEnter={(e) => handleMouseEnter(member, e)}
               onMouseLeave={handleMouseLeave}
             >
               <span className="member-name">{member.name}</span>
@@ -39,21 +47,11 @@ const Team = () => {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="team-photo-area">
-        {hoveredMember ? (
-          <div className="team-photo-card">
-            <img 
-              src={hoveredMember.photo} 
-              alt={hoveredMember.name} 
-              className="team-member-photo" 
-            />
-          </div>
-        ) : (
-          <div className="team-photo-placeholder">
-            {/* You can add a default image or a simple text here */}
-            <span>Hover over a name to see the photo</span>
+        {hoveredMember && (
+          <div className="team-photo-popup" style={{ top: `${photoTop}px` }}>
+            <div className="team-photo-card">
+              <img src={hoveredMember.photo} alt={hoveredMember.name} className="team-member-photo" />
+            </div>
           </div>
         )}
       </div>

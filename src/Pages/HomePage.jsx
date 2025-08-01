@@ -35,7 +35,6 @@ const HomePage = ({ onGoToWorks }) => {
       {/* Hero section */}
       <section className="hero-section">
         <h1>STEELLAR DESIGN STUDIO</h1>
-        <p>SEIZE GREATNESS.</p>
       </section>
 
       {/* Looping Marquee Section */}

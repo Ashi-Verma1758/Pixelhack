@@ -2,13 +2,20 @@
 import React from 'react';
 import './FeaturedProducts.css';
 
-// Sample product data
+// Import your local images
+import minimalDeskImage from '../../assets/img1.jpg';
+import beautifulLampsImage from '../../assets/img2.jpg';
+import goldenOalaSofaImage from '../../assets/ing3.jpg';
+import chairSofaImage from '../../assets/img4.jpg';
+import accessoriesImage from '../../assets/img4.jpg';
+
+// Sample product data, now using the imported images
 const products = [
-  { id: 1, name: 'Minimal Desk', price: '$600', image: 'https://via.placeholder.com/400x400/f0f0f0?text=Desk' },
-  { id: 2, name: 'Beautiful Lamps', price: '$150', image: 'https://via.placeholder.com/400x400/f0f0f0?text=Lamp' },
-  { id: 3, name: 'Golden Oala Sofa', price: '$250', image: 'https://via.placeholder.com/400x400/f0f0f0?text=Sofa' },
-  { id: 4, name: 'Chair & Sofa', price: '$400', image: 'https://via.placeholder.com/400x400/f0f0f0?text=Chair' },
-  { id: 5, name: 'Accessories', price: '$50', image: 'https://via.placeholder.com/400x400/f0f0f0?text=Accessory' },
+  { id: 1, name: 'Minimal Desk', price: '$600', image: minimalDeskImage },
+  { id: 2, name: 'Beautiful Lamps', price: '$150', image: beautifulLampsImage },
+  { id: 3, name: 'Golden Oala Sofa', price: '$250', image: goldenOalaSofaImage },
+  { id: 4, name: 'Chair & Sofa', price: '$400', image: chairSofaImage },
+  { id: 5, name: 'Accessories', price: '$50', image: accessoriesImage },
 ];
 
 const FeaturedProducts = () => {
