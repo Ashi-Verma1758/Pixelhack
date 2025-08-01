@@ -7,49 +7,77 @@ import './Loader.css';
 
 export function LoadingScreen({ onComplete }) {
   const [progress, setProgress] = useState(0);
+  const [nowStyleIndex, setNowStyleIndex] = useState(0);
+
+  const nowStyles = ["NOW", "𝓝𝓞𝓦", "Nᴏᴡ"];
 
   useEffect(() => {
-    // This timer simulates the loading progress
-    const timer = setInterval(() => {
+    const progressTimer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          clearInterval(timer);
-          // Wait for a moment before completing to show the 100% state
-          setTimeout(onComplete, 500); 
+          clearInterval(progressTimer);
+          setTimeout(onComplete, 1000); // Longer delay after finish
           return 100;
         }
-        return prev + 2; // Increment progress
+        return prev + 1;
       });
-    }, 50); // Adjust this value to change the speed of the progress
+    }, 40); // Slower increment
 
-    // Cleanup function to clear the interval
-    return () => clearInterval(timer);
+    const nowCycle = setInterval(() => {
+      setNowStyleIndex((prev) => (prev + 1) % nowStyles.length);
+    }, 700);
+
+    return () => {
+      clearInterval(progressTimer);
+      clearInterval(nowCycle);
+    };
   }, [onComplete]);
 
   return (
     <motion.div
-      className="loading-screen"
-      exit={{ opacity: 0 }} // This is the fade-out animation
-      transition={{ duration: 0.8 }}
+      className="loader-screen"
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
     >
-      <div className="loading-content-wrapper">
+      <div className="loader-content-wrapper">
+        {/* Line 1 */}
         <motion.h1
-          className="loading-title"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          className="loading-counter-line"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
-          Your Web Experience is Loading Right Now
+          {progress} – 100 &nbsp; <span className="your-lies">YOUR</span>
         </motion.h1>
 
-        <div className="progress-bar-container">
-          <motion.div
-            className="progress-bar-fill"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.1 }}
-          />
-        </div>
+        {/* Line 2 */}
+        <motion.h2
+          className="loading-line"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          WEB EXPERIENCE
+        </motion.h2>
+
+        {/* Line 3 */}
+        <motion.h2
+          className="loading-line"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          IS LOADING RIGHT <span className="loading-title-now">{nowStyles[nowStyleIndex]}</span>
+        </motion.h2>
+
+        <motion.p
+          className="loading-message"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          Please wait a few seconds.
+        </motion.p>
       </div>
     </motion.div>
   );
