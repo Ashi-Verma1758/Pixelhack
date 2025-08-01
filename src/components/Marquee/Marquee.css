@@ -1,4 +1,4 @@
-/* src/components/Marquee/Marquee.css */
+
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
@@ -8,15 +8,13 @@
 
 .marquee-content {
   display: flex;
-  animation: marquee-scroll 30s linear infinite;
+  animation: marquee-scroll 5s linear infinite;
 }
 
-/* Pause the animation on hover */
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
 }
 
-/* Define the animation for the continuous scroll */
 @keyframes marquee-scroll {
   0% {
     transform: translateX(0%);
@@ -27,17 +25,19 @@
 }
 
 .marquee-item {
-  /* This ensures the items don't shrink and maintain their size */
   flex-shrink: 0;
-  padding: 0 1rem; /* Adjust spacing between items */
+  padding: 0 1rem; 
 }
 
-/* Style for the images inside the marquee items */
 .marquee-item img {
-  width: 30vw;  /* Set a fixed width */
-  height: 40vh; /* Set a fixed height */
-  /* This is the key to preventing image stretching */
+  width: 30vw;
+  height: 40vh;
   object-fit: cover;
   display: block;
-  border-radius: 8px; /* Optional: adds a nice rounded corner */
+  border-radius: 8px;
+  pointer-events: none; 
+  transition: transform 0.5s ease; 
+}
+.marquee-item:hover img {
+  transform: scale(1.1); 
 }
