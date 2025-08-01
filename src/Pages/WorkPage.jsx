@@ -1,10 +1,10 @@
 import React from 'react';
 import './WorksPage.css';
-import ashiVermaImage from '../../../public/a.jpg';
-import yashiGuptaImage from '../../../public/b.jpg';
-import shubhaSinghImage from '../../../public/c.jpg';
-import saumyaVermaImage from '../../../public/d.jpg';
-import omVermaImage from '../../../public/e.jpg';
+import ashiVermaImage from '../../public/a.jpg';
+import yashiGuptaImage from '../../public/b.jpg';
+import shubhaSinghImage from '../../public/c.jpg';
+import saumyaVermaImage from '../../public/d.jpg';
+import omVermaImage from '../../public/e.jpg';
 const portfolioItems = [
   { id: 1, name: 'Ashi Verma', title: 'CEO', photo: ashiVermaImage },
    { id: 2, name: 'Yashi Gupta', title: 'COO', photo: yashiGuptaImage },
